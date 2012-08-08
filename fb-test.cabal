@@ -1,0 +1,16 @@
+name:          fb-test
+version:       0.0
+build-type:    Simple
+cabal-version: >= 1.8
+
+executable fb-test
+  main-is:       Main.hs
+  other-modules: System.Framebuffer
+  build-depends: base                  >= 4.5  && < 4.6
+               , base-unicode-symbols
+               , cairo                 >= 0.12 && < 0.13
+               , unix                  >= 2.5  && < 2.6
+  extensions:    CPP
+               , ForeignFunctionInterface
+               , UnicodeSyntax
+  ghc-options:   -Wall
